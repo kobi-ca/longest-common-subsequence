@@ -2,6 +2,10 @@
 #include <set>
 #include "fmt/format.h"
 
+// LCS is not in the context of subsequent characters, but you can have
+// non-contiguous chars that match between the 2 strings.
+// in other words, we are not looking for a longest contiguous string inside a string
+
 namespace {
     [[nodiscard("")]]
     unsigned int count_lcs(std::string_view sv1, std::string_view sv2) {
